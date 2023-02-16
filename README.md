@@ -4,7 +4,7 @@ This website was created with ReactJS and Bootstrap and uses Firebase to provide
 Website created by Noufal Rahman on behalf of the WebOps team of the IITM BS
 
 To run the app:
-- Clone this repository `git clone https://github.com/Rahman24/iitmbs-elections`
+- Clone this repository `git clone https://github.com/iamnoufal/iitmbs-elections`
 - Navigate to the folder and install the dependencties `cd iitmbs-elections & npm install`
 - Make sure you have the .env file with all the Firebase secrets
 - Start the server with `npm start`
