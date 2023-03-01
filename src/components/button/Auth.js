@@ -11,7 +11,8 @@ const AuthButton = ({ onAuthSuccess, onAuthFailure }) => {
     if (status === "success") {
       let data = {};
       if (response.user) {
-        data = parseSessionData(response.user);
+        const { uid, email, displayName, accessToken } = response.user;
+        data = { uid, email, displayName, accessToken }
       }
       return onAuthSuccess(data);
     }
