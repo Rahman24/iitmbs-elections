@@ -1,3 +1,5 @@
+import "./Loader.css";
+
 const Loader = ({ loading, children }) => {
   return loading ? (
     <div className="loading">
