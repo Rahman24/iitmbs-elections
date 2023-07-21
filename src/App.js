@@ -18,7 +18,6 @@ import { onMessageListener } from "apis/firebase";
 
 import "./App.css";
 
-
 const defaultState = { loading: false, liveData: {} };
 function App() {
   const [session, setSession] = useState({ ...defaultState, loading: true });
