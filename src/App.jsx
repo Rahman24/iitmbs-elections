@@ -82,8 +82,7 @@ function App() {
               path="/vote"
               render={(routeProps) => (
                 <Authenticate>
-                  {/* <ElectionsPage {...routeProps} /> */}
-                  <VotePage {...routeProps} />
+                  <ElectionsPage {...routeProps} />
                 </Authenticate>
               )}
             />
