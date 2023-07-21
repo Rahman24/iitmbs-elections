@@ -2,7 +2,7 @@ import Layout from "components/Layout";
 import { AppContext } from "contexts/app";
 import { useContext, useState, useEffect } from "react";
 import { Redirect } from "react-router";
-import Loader from "./loader/Loader";
+import Loader from "./Loader";
 
 const Authenticate = ({ children }) => {
   const { session } = useContext(AppContext);

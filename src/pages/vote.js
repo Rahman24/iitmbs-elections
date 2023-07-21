@@ -18,11 +18,11 @@ const VotePage = () => {
 
   const [time, setTime] = useState(0)
 
-  setInterval(() => {
-    const endTime = endDate.getTime();
-    const currTime = new Date().getTime();
-    setTime(endTime-currTime);
-  }, 1000)
+  // setInterval(() => {
+  //   const endTime = endDate.getTime();
+  //   const currTime = new Date().getTime();
+  //   setTime(endTime-currTime);
+  // }, 1000)
 
   const handleSubmit = () => {
     resp.house = data.house;

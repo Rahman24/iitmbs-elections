@@ -1,5 +1,9 @@
 import { signInFirebase } from "apis/firebase";
 
+import { parseSessionData } from "helpers/auth";
+
+import "./btn.css";
+
 const AuthButton = ({ onAuthSuccess, onAuthFailure }) => {
   const handleClick = async () => {
     const response = await signInFirebase();

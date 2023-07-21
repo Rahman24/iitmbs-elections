@@ -7,4 +7,5 @@ const Profile = ({ userName = "", email ="", house="" }) => {
     </div>
   )
 }
+
 export default Profile;

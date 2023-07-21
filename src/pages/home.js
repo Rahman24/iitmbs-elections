@@ -8,6 +8,7 @@ const HomePage = () => {
     <Layout>
       <Container bgColor="bg-color-maroon">
         <img src={electionsImg} className="w-100" alt="header img" />
+        {/* <p className="p-0 mt-4 display-6 text-center">IITM BS Elections 2022</p> */}
       </Container>
       <Container>
         <p>It is an honor and a privilege for the IITM BS Degree Student Affairs and the Election Committee to organize the House Council elections. We hope to conduct fair and equal voting access that matches the best person to each of the House Council positions.</p>

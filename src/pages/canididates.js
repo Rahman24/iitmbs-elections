@@ -15,6 +15,7 @@ const CandidatesPage = () => {
   const [sec, setSec] = useState([]);
   const [dySec, setDySec] = useState([]);
   const [webAd, setWebAd] = useState([]);
+  // const [mentor, setMentor] = useState([]);
   const [modal, showModal] = useState(false);
   const closeModal = () => showModal(false)
   const openModal = (name, email, photo, intro, doc) => {
@@ -34,6 +35,7 @@ const CandidatesPage = () => {
       setSec(r.sec);
       setDySec(r.dysec);
       setWebAd(r.webad);
+      // setMentor(r.mentor);
     }).then(() => {
       setLoading(false)
     })
@@ -46,6 +48,8 @@ const CandidatesPage = () => {
             <p className="text-white text-center h5 text-uppercase">know the Candidates</p>
             <p className="text-white text-center text-capitalize display-4 mt-2">{house}</p>
             <a href="https://youtu.be/DordJ8Ep1bI" target={"_blank"} rel="noreferrer"><img src={mtcImg} width="100%" alt="Youtube Video" /></a>
+            {/* <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/DordJ8Ep1bI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
+            {/* <p className="text-center text-white mt-3">Click on the candidate to know more</p> */}
           </ScrollFade>
         </Container>
         <ScrollFade>
