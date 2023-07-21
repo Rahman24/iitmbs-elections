@@ -64,7 +64,7 @@ const VotePage = () => {
         <p className="display-5 text-center text-white">Vote for your House Representatives</p>
         <h6 className="text-center">Voting Closes in {String(parseInt(time/(1000*60*60))).length===1 ? "0"+String(parseInt(time/(1000*60*60))) : String(parseInt(time/(1000*60*60)))}:{String(parseInt((time%(1000*60*60))/(1000*60))).length===1 ? "0"+String(parseInt((time%(1000*60*60))/(1000*60))) : String(parseInt((time%(1000*60*60))/(1000*60)))}:{String(parseInt((time%(1000*60))/(1000))).length===1 ? "0"+String(parseInt((time%(1000*60))/(1000))) : String(parseInt((time%(1000*60))/(1000)))}</h6>
       </Container>
-      {startDate<currDate && endDate>currDate ? (
+      {/* {!startDate<currDate && !endDate>currDate ? ( */}
         <Loader loading={loading}>
           {data.voted ? (
             <div className="w-100 d-flex justify-content-center align-items-center" style={{height:"70vh"}}>
@@ -179,11 +179,11 @@ const VotePage = () => {
             </Container>
           )}
         </Loader>
-      ) : (
+      {/* ) : (
         <div className="w-100 d-flex justify-content-center align-items-center" style={{height:"70vh"}}>
           <h5 className="text-center">Voting window is not accessible right now. If you think this is a mistake, <a className="text-black" href="mailto:student-affairs@onlinedegree.iitm.ac.in,webops@student.onlinedegree.iitm.ac.in">let us know</a></h5>
         </div>
-      )}
+      )} */}
       <div className="d-flex justify-content-center w-100">
         <a className="text-white" href="mailto:student-affairs@onlinedegree.iitm.ac.in,webops@student.onlinedegree.iitm.ac.in?subject=Not%20able%20to%20vote&body=Hi%0AI'm not able to vote for the UHC elections. <please brief what happened>">In case of issues, let us know</a>
       </div>
