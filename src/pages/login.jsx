@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Redirect } from "react-router";
 
-import AuthButton from "components/button/Auth";
+import AuthButton from "components/AuthButton";
 import Footer from "components/footer/Footer";
 
 import { AppContext } from "contexts/app";
