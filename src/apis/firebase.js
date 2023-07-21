@@ -14,17 +14,18 @@ import { getMessaging, onMessage } from "firebase/messaging";
 import { addToCache, getFromCache } from "./cache";
 
 export const getProfileDetails = async () => {
-  var res = await getFromCache("user");
-  if (res!=false) {
-    return res
-  } else {
+  // var res = await getFromCache("user");
+  // if (res!=false) {
+  //   return res
+  // } else {
     const auth = getAuth();
     const user = auth.currentUser;
     const { displayName: userName, email } = user;
     const db = getFirestore();
     try {
-      const userDoc = await getDoc(doc(db, "users", email));
+      const userDoc = await getDoc(doc(db, "users", email.replace('student.onlinedegree', "ds.study")));
       const data = userDoc.data();
+      console.log('==',data)
       addToCache("user", {
         userName,
         email,
@@ -40,7 +41,7 @@ export const getProfileDetails = async () => {
       alert("Sign in using your student login email");
       return {};
     }
-  }
+  // }
 };
 
 export const signInFirebase = async () => {
@@ -110,6 +111,7 @@ const getSec = async (house) => {
   const secDoc = await getDocs(q);
   let sec = [];
   secDoc.forEach(doc => sec.push(doc.data()))
+  console.log("[==]" ,sec)
   return sec;
 }
 
@@ -141,10 +143,11 @@ const getMentors = async (house) => {
 }
 
 export const getElectionCandidates = async () => {
-  var res = await getFromCache("nominations");
-  if (res!=false) {
-    return res
-  }
+  // var res = await getFromCache("nominations");
+  // console.log(res)
+  // if (res!=false) {
+  //   return res
+  // }
   const user = await getProfileDetails();
   const house = user.house.split(" ")[0].toLowerCase();
   const sec = await getSec(house);
@@ -152,6 +155,7 @@ export const getElectionCandidates = async () => {
   const webad = await getWebAd(house);
   const mentor = await getMentors(house);
   addToCache("nominations", {...user, sec, dysec, webad, mentor})
+  console.log(sec)
   return {...user, sec, dysec, webad, mentor};
 }
 
